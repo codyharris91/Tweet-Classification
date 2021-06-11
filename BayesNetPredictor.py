@@ -1,14 +1,3 @@
-###################################
-# CS B551 Fall 2020, Assignment #4
-#
-# Your names and user ids:
-# Cody Harris (harrcody)
-#
-# BayesNetPredictor.py
-# Predicts the location of a tweet
-# Based on Probabilities from 
-# BayesNetClassifier.py
-
 import numpy as np
 
 class BayesNetPredictor:
