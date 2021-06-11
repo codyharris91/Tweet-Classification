@@ -65,7 +65,6 @@ The training data is read in and then fed into the CountVectorizer function. Thi
 Then this matrix is used to loop through all the words in the traing data. Each word is evaluated for its entropy, and the lowest entropy is the word that is split on. This process is repeated recursively to build a dictionary. The tree stops splitting if either it has reached the max depth specified by the class call, or it reaches a node that only has one label. If there is only one label, that leaf gains that label as it's predicted outcome. If the function reaches it's max depth, then the label that has the highest occurance is chosen.
 
 Equation for Entropy:  
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" title="\sum \frac{n_i}{n_t} \sum -\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}"/></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" title="\sum \frac{n_i}{n_t} \sum -\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" /></a>
 
@@ -107,8 +106,6 @@ This portion of the problem reads in a pickle file. If the label in the dictiona
 
 The program simply loops through each tweet in the testing set, and for each tweet evaluates the words of the tweet using the equation below to calculate the probability of the tweet coming from each of the 12 equations.  
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" title="P(L = l | w_1,w_2,w_3,w_n) = \frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" /></a>
-
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" title="P(L = l | w_1,w_2,w_3,w_n) = \frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" /></a>
 
 It then selects the highest probability across the locations and predicts that location. 
@@ -117,11 +114,7 @@ It then selects the highest probability across the locations and predicts that l
 
 In the equation specified above, the denominator is always the same for each location. Therefore as we are maximizing over this value, the denominator isn't needed and adds extra complexity. Therefore, I am actually doing the following:  
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
-
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{200}&space;\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{200}&space;\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
 
 ## Predicting using Decision Tree - DecisionTreePredictor.py
 
