@@ -1,15 +1,3 @@
-###################################
-# CS B551 Fall 2020, Assignment #4
-#
-# Your names and user ids:
-# Cody Harris (harrcody)
-#
-# geolocate.py
-# Handles training and testing of either
-# a bayes net or decision tree to predict
-# the location of a tweet based on the
-# words in the tree
-
 import sys
 import pickle
 from BayesNetClassifier import BayesNetClassifier
