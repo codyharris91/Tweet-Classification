@@ -1,4 +1,21 @@
-# Assignment 4: Machine Learning - Tweet Classification
+# Machine Learning from Scratch - Tweet Classification
+
+## How to run
+
+To train using a Bayes Net:
+```
+python3 ./geolocate.py train bayestraining-input-file bayes-model-output-file
+```
+
+To train using a decision tree:
+```
+python3 ./geolocate.py train dtreetraining-input-file dtree-model-output-file
+```
+
+To test using either model type:
+```
+python3 ./geolocate.py testmodel-input-file testing-input-file testing-output-file
+```
 
 ## Learning a Naive Bayes Classifier - BayesNetClassifier.py
 
