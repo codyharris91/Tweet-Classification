@@ -1,13 +1,3 @@
-###################################
-# CS B551 Fall 2020, Assignment #4
-#
-# Your names and user ids:
-# Cody Harris (harrcody)
-#
-# DecisionTreePredictor.py
-# Predicts the location of a Tweet
-# Based on the words in the tweet
-
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 
