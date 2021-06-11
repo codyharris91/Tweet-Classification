@@ -65,7 +65,7 @@ The training data is read in and then fed into the CountVectorizer function. Thi
 Then this matrix is used to loop through all the words in the traing data. Each word is evaluated for its entropy, and the lowest entropy is the word that is split on. This process is repeated recursively to build a dictionary. The tree stops splitting if either it has reached the max depth specified by the class call, or it reaches a node that only has one label. If there is only one label, that leaf gains that label as it's predicted outcome. If the function reaches it's max depth, then the label that has the highest occurance is chosen.
 
 Equation for Entropy:  
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" title="\sum \frac{n_i}{n_t} \sum -\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" title="\sum \frac{n_i}{n_t} \sum -\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}"/></a>
 
 After the tree is built, a function traverses the tree recursively to print out the top 3 layers of the tree. 
 
