@@ -1,12 +1,3 @@
-####################################
-# CS B551 Fall 2020, Assignment #4
-#
-# Your names and user ids:
-# Cody Harris (harrcody)
-#
-# DecisionTreeClassifier.py
-# Builds a Decision Tree
-
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 import time
