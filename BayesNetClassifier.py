@@ -1,14 +1,3 @@
-###################################
-# CS B551 Fall 2020, Assignment #4
-#
-# Your names and user ids:
-# Cody Harris (harrcody)
-#
-# BayesNetClassifier.py
-# Builds probability dictionaries
-# That will be used in a bayes net
-# Prediction
-
 import time
 import pickle
 
