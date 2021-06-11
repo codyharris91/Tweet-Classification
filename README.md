@@ -67,6 +67,8 @@ Then this matrix is used to loop through all the words in the traing data. Each 
 Equation for Entropy:  
 <a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" title="\sum \frac{n_i}{n_t} \sum -\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}"/></a>
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\sum&space;\frac{n_i}{n_t}&space;\sum&space;-\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" title="\sum \frac{n_i}{n_t} \sum -\frac{n_i_c}{n_i}log_2\frac{n_i_c}{n_i}" /></a>
+
 After the tree is built, a function traverses the tree recursively to print out the top 3 layers of the tree. 
 
 ### Hyper Parameter tuning
@@ -107,6 +109,8 @@ The program simply loops through each tweet in the testing set, and for each twe
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" title="P(L = l | w_1,w_2,w_3,w_n) = \frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" /></a>
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;P(L&space;=&space;l&space;|&space;w_1,w_2,w_3,w_n)&space;=&space;\frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" title="P(L = l | w_1,w_2,w_3,w_n) = \frac{P(w_1,w_2,w_3,w_n|L)P(L)}{P(w_1,w_2,w_3,w_n)}" /></a>
+
 It then selects the highest probability across the locations and predicts that location. 
 
 ### Problems, Assumptions, and Simplifications
@@ -114,6 +118,8 @@ It then selects the highest probability across the locations and predicts that l
 In the equation specified above, the denominator is always the same for each location. Therefore as we are maximizing over this value, the denominator isn't needed and adds extra complexity. Therefore, I am actually doing the following:  
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
 
 ## Predicting using Decision Tree - DecisionTreePredictor.py
 
