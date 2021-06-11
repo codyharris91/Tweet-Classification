@@ -121,6 +121,8 @@ In the equation specified above, the denominator is always the same for each loc
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{200}&space;\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{200}&space;\bg_white&space;max(P(w_1,w_2,w_3,w_n|L)P(L))" title="max(P(w_1,w_2,w_3,w_n|L)P(L))" /></a>
+
 ## Predicting using Decision Tree - DecisionTreePredictor.py
 
 ### How it Works
